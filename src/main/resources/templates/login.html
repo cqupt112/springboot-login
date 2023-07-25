@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Index</title>
+</head>
+<style>
+  body{
+    background: #1ca7e2;
+  }
+  .login{
+    width: 350px;
+    height: 210px;
+    background:#d9e3e8;
+    margin:200px auto;
+    border-radius: 10px;
+  }
+  .login_top{
+    width: 100%;
+    height: 50px;
+    background: #0b9af3;
+    float: left;
+    border-radius: 10px 10px 0px 0px;/*圆角*/
+    color: white;
+    text-align: center; /*水平居中*/
+    line-height: 50px; /*垂直居中*/
+  }
+  .ref{
+    width: 350px;
+    height: 50px;
+    margin-left: 10px;
+    margin-top: 5px;
+    float: left; /*浮动，一行两个div*/
+    line-height: 30px;
+
+  }
+  .ref1{
+    width: 350px;
+    height: 50px;
+    margin-left: 10px;
+    text-align: center;
+    float: left;
+    line-height: 40px;
+
+  }
+
+  .button{/*按钮样式*/
+    width: 75px;
+    height: 25px;
+    font-size: 10pt;
+  }
+
+</style>
+
+<script>
+  function signup(){
+    window.location.href="signup.html";
+  }
+</script>
+
+
+<body>
+<div class="login">
+  <div class="login_top">用户登陆</div>
+  <form  role="form" action = "/loginIn" method="post">
+    <div class="ref">
+      <div style="width: 100px;height: 50px;float: left"> 用户名</div>
+      <div style="width: 200px;height: 50px;text-align: center;float: left"><input type="text" id="username" name="username" /></div>
+    </div>
+    <div class="ref">
+      <div style="width: 100px;height: 50px;float: left"> 密码</div>
+      <div style="width: 200px;height: 50px;text-align: center;float: left"><input type="password" id="password" name="password"/></div>
+    </div>
+    <div class="ref1">
+      <input type="submit" id="login" value="登录" />
+      <a href="/signup"><input type="button" value="注册"></a>
+    </div>
+
+  </form>
+
+
+</div>
+
+</body>
+
+
+</html>
